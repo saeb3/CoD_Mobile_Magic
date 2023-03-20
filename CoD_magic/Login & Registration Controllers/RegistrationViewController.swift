@@ -52,7 +52,11 @@ class RegistrationViewController: UIViewController, UITextFieldDelegate {
     @IBAction func btnCreate(_ sender: UIButton) {
         
         //Prevent the creation of a new user if the username already exists in CoreData
-        guard let username = txtUsername.text else {return}
+        guard let username = txtUsername.text else {
+           
+            return
+            
+        }
         
         if userExists(username: username) {
             //Username already exists, show an error message
@@ -61,9 +65,9 @@ class RegistrationViewController: UIViewController, UITextFieldDelegate {
             alertController.addAction(okAction)
             present(alertController, animated: true, completion: nil)
         } else {
-            //Username does not exist, create new user
+            //Username does not exist, create new username
             
-            //Verification that email is in correct format. It it is not, will show an error.
+            //Verification that email is in correct format. If it is not, will show an error.
             guard let email = txtEmail.text else {
                 //Email field is empty
                 return
@@ -121,7 +125,7 @@ class RegistrationViewController: UIViewController, UITextFieldDelegate {
             }
         }
         
-        //Fucntion to determine if username already exists in CoreData
+        //Function to determine if username already exists in CoreData
         func userExists(username: String) -> Bool {
             let appDelegate = UIApplication.shared.delegate as! AppDelegate
             let context = appDelegate.persistentContainer.viewContext

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gW7-FW-GUE">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1R8-qT-8jD">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -8,60 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Home-->
-        <scene sceneID="HeU-0d-Eiv">
-            <objects>
-                <viewController title="Home" id="az7-PP-tua" customClass="HomeViewController" customModule="CoD_magic" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="u4G-IT-oyd">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sEM-91-fvO">
-                                <rect key="frame" x="126" y="356.66666666666669" width="141" height="35"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted" title="Return to Login"/>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="QdQ-Gy-XBY"/>
-                                </connections>
-                            </button>
-                            <pickerView hidden="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kr5-VS-DTa">
-                                <rect key="frame" x="0.0" y="107" width="393" height="216"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="az7-PP-tua" id="zEr-HW-lTq"/>
-                                    <outlet property="delegate" destination="az7-PP-tua" id="0NM-Lu-F9R"/>
-                                </connections>
-                            </pickerView>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="More Options" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ihr-yN-ZbK">
-                                <rect key="frame" x="92" y="65" width="235" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <outlet property="delegate" destination="az7-PP-tua" id="lSf-Nx-w4h"/>
-                                </connections>
-                            </textField>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="nQi-9l-GVk"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="ihr-yN-ZbK" firstAttribute="top" secondItem="nQi-9l-GVk" secondAttribute="top" constant="6" id="2jQ-rx-ZvB"/>
-                            <constraint firstItem="sEM-91-fvO" firstAttribute="top" secondItem="Kr5-VS-DTa" secondAttribute="bottom" constant="33.670000000000002" id="NYh-Z8-Sm7"/>
-                            <constraint firstItem="Kr5-VS-DTa" firstAttribute="top" secondItem="ihr-yN-ZbK" secondAttribute="bottom" constant="8" symbolic="YES" id="rTR-vY-b8F"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="kEy-zg-n3w"/>
-                    <connections>
-                        <outlet property="dropDown" destination="Kr5-VS-DTa" id="cbT-Vj-aYi"/>
-                        <outlet property="textBox" destination="ihr-yN-ZbK" id="utN-eC-lm3"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mx9-4C-l5r" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="20.610687022900763" y="735.91549295774655"/>
-        </scene>
         <!--Payments-->
         <scene sceneID="ZpW-H4-dqZ">
             <objects>
-                <viewController title="Payments" id="V5P-NJ-I7j" sceneMemberID="viewController">
+                <viewController title="Payments" id="V5P-NJ-I7j" customClass="PaymentsViewController" customModule="CoD_magic" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tRg-G7-hAX">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -84,12 +34,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pRZ-9t-MhC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1815" y="3184"/>
+            <point key="canvasLocation" x="946" y="3637"/>
         </scene>
         <!--Service Request-->
         <scene sceneID="vMZ-hX-kb0">
             <objects>
-                <viewController title="Service Request" id="AIc-sx-TIs" sceneMemberID="viewController">
+                <viewController title="Service Request" id="AIc-sx-TIs" customClass="ServiceRequestViewController" customModule="CoD_magic" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZHG-X9-evj">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -112,12 +62,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GcW-41-0bn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1808" y="1849"/>
+            <point key="canvasLocation" x="946" y="2223"/>
         </scene>
         <!--Directory-->
         <scene sceneID="84O-M1-GqL">
             <objects>
-                <viewController title="Directory" id="Wmy-Nv-5fz" sceneMemberID="viewController">
+                <viewController title="Directory" id="Wmy-Nv-5fz" customClass="DirectoryViewController" customModule="CoD_magic" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FlG-JK-mti">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -140,18 +90,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Jj-oX-HAv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1815" y="2502"/>
+            <point key="canvasLocation" x="946" y="2935"/>
         </scene>
         <!--City Calendar-->
         <scene sceneID="cgz-7B-BlX">
             <objects>
-                <viewController title="City Calendar" id="SMA-cW-55m" sceneMemberID="viewController">
+                <viewController title="City Calendar" id="SMA-cW-55m" customClass="CityCalendarViewController" customModule="CoD_magic" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MhR-R8-AS8">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Directory" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RYV-SP-Yrb">
-                                <rect key="frame" x="128" y="405" width="137" height="42"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City Calendar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RYV-SP-Yrb">
+                                <rect key="frame" x="94.666666666666686" y="405" width="204" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -168,12 +118,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oJm-gN-nbh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1808" y="1172"/>
+            <point key="canvasLocation" x="947" y="1546"/>
         </scene>
         <!--News-->
         <scene sceneID="4Si-Nw-xyy">
             <objects>
-                <viewController title="News" id="gvY-hm-UYO" sceneMemberID="viewController">
+                <viewController title="News" id="gvY-hm-UYO" customClass="NewsViewController" customModule="CoD_magic" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yqv-Jr-APD">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -196,12 +146,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oL2-8x-eeJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1808" y="565"/>
+            <point key="canvasLocation" x="947" y="865"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="XFa-38-7XM">
             <objects>
                 <tabBarController id="gW7-FW-GUE" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="m9Z-Ta-UKE"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zX0-Qn-JzF">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -217,14 +168,14 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dyi-4U-a5o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="972" y="905"/>
+            <point key="canvasLocation" x="21" y="865"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CoD_magic" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CoD_img_background" translatesAutoresizingMaskIntoConstraints="NO" id="qrG-oe-ekf">
@@ -288,7 +239,7 @@
                                 <buttonConfiguration key="configuration" style="tinted" title="Sign In"/>
                                 <connections>
                                     <action selector="btnSubmit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ACp-NG-dp7"/>
-                                    <segue destination="az7-PP-tua" kind="show" id="1kN-jb-Ubt"/>
+                                    <segue destination="gW7-FW-GUE" kind="show" id="jaZ-RI-aRC"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TCd-Z2-VUM">
@@ -298,7 +249,7 @@
                                 <buttonConfiguration key="configuration" style="tinted" title="Visitor"/>
                                 <connections>
                                     <action selector="btnSubmit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HkS-Ms-nlZ"/>
-                                    <segue destination="az7-PP-tua" kind="show" id="b5V-bN-33A"/>
+                                    <segue destination="gW7-FW-GUE" kind="show" id="OaP-HR-tt0"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -314,14 +265,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="20.610687022900763" y="3.5211267605633805"/>
+            <point key="canvasLocation" x="946" y="25"/>
         </scene>
         <!--Registration-->
         <scene sceneID="pPV-0i-8tj">
             <objects>
                 <viewController title="Registration" id="iTB-jK-mxL" customClass="RegistrationViewController" customModule="CoD_magic" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Hee-yi-g9S">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CoD_img_background" translatesAutoresizingMaskIntoConstraints="NO" id="bgk-bL-AgR">
@@ -407,11 +358,30 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5tw-uv-gdz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="739.69465648854964" y="3.5211267605633805"/>
+            <point key="canvasLocation" x="1958" y="25"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="M3h-Ve-w90">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1R8-qT-8jD" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="QWz-i1-2Zn"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="G5d-xf-C8Z">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="RXd-n7-lXh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XjC-M9-33x" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="21" y="26"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="1kN-jb-Ubt"/>
+        <segue reference="OaP-HR-tt0"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="CoD_img_background" width="1200" height="719"/>
