@@ -73,6 +73,15 @@ class ViewController: UIViewController {
             //Sign-in successful, navigate to the next screen or perform other logic
             print("Successful sign-in!")
         } else {
+            
+            let alertController = UIAlertController(title: "Error", message: "Incorrect Login.", preferredStyle: .alert)
+            
+            //Add an OK button to the alert controller
+            let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+            alertController.addAction(okAction)
+            
+            //Present the alert controller
+            present(alertController, animated: true, completion: nil)
             //Sign-in failed, display an error message or perform other error handling
             print("Sign-in failed!")
         }
