@@ -1,0 +1,67 @@
+import UIKit
+import CoreData
+
+class RegistrationViewController: UIViewController {
+
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
+    @IBOutlet weak var txtUsername: UITextField!
+    @IBOutlet weak var txtEmail: UITextField!
+    @IBOutlet weak var txtPassword: UITextField!
+    @IBOutlet weak var txtVerifyPassword: UITextField!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
+    @IBAction func registerButtonTapped(_ sender: UIButton) {
+        
+        // Check if username and email are unique
+        let request: NSFetchRequest<RegisterUser> = RegisterUser.fetchRequest()
+        request.predicate = NSPredicate(format: "username == %@ OR email == %@", txtUsername.text!, txtEmail.text!)
+        do {
+            let existingUsers = try context.fetch(request)
+            if existingUsers.count > 0 {
+                // Username or email already taken
+                let alertController = UIAlertController(title: "Error", message: "Username or email already taken", preferredStyle: .alert)
+                let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+                alertController.addAction(okAction)
+                present(alertController, animated: true, completion: nil)
+                return
+            }
+        } catch {
+            print("Error checking for existing users: \(error.localizedDescription)")
+            return
+        }
+        
+        // Verify password match
+        guard txtPassword.text == txtVerifyPassword.text else {
+            // Passwords don't match
+            let alertController = UIAlertController(title: "Error", message: "Passwords don't match", preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+            alertController.addAction(okAction)
+            present(alertController, animated: true, completion: nil)
+            return
+        }
+        
+        // Create new user
+        let newUser = RegisterUser(context: context)
+        newUser.username = txtUsername.text
+        newUser.email = txtEmail.text
+        newUser.password = txtPassword.text
+        
+        do {
+            try context.save()
+            // User saved successfully
+            let alertController = UIAlertController(title: "Success", message: "User created successfully", preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "OK", style: .default, handler: { _ in
+                // Show confirmation message or navigate to next screen
+            })
+            alertController.addAction(okAction)
+            present(alertController, animated: true, completion: nil)
+        } catch {
+            print("Error saving user: \(error.localizedDescription)")
+            // Show error message
+        }
+    }
+}
