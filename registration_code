@@ -3,65 +3,59 @@ import CoreData
 
 class RegistrationViewController: UIViewController {
 
-    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    
     @IBOutlet weak var txtUsername: UITextField!
     @IBOutlet weak var txtEmail: UITextField!
     @IBOutlet weak var txtPassword: UITextField!
     @IBOutlet weak var txtVerifyPassword: UITextField!
-    
+
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
-    @IBAction func registerButtonTapped(_ sender: UIButton) {
-        
-        // Check if username and email are unique
-        let request: NSFetchRequest<RegisterUser> = RegisterUser.fetchRequest()
-        request.predicate = NSPredicate(format: "username == %@ OR email == %@", txtUsername.text!, txtEmail.text!)
+
+    @IBAction func registerButtonPressed(_ sender: UIButton) {
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "RegisterUser")
+        request.predicate = NSPredicate(format: "username = %@ OR email = %@", txtUsername.text!, txtEmail.text!)
         do {
-            let existingUsers = try context.fetch(request)
-            if existingUsers.count > 0 {
-                // Username or email already taken
-                let alertController = UIAlertController(title: "Error", message: "Username or email already taken", preferredStyle: .alert)
-                let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-                alertController.addAction(okAction)
-                present(alertController, animated: true, completion: nil)
-                return
+            let count = try context.count(for: request)
+            if count == 0 {
+                if txtPassword.text == txtVerifyPassword.text {
+                    let newUser = NSEntityDescription.insertNewObject(forEntityName: "RegisterUser", into: context) as! RegisterUser
+                    newUser.username = txtUsername.text
+                    newUser.email = txtEmail.text
+                    newUser.password = txtPassword.text
+                    appDelegate.saveContext()
+                } else {
+                    showAlert(title: "Password Mismatch", message: "Please verify your password.")
+                }
+            } else {
+                showAlert(title: "User Already Exists", message: "The username or email address is already taken.")
             }
         } catch {
-            print("Error checking for existing users: \(error.localizedDescription)")
-            return
+            print("Error checking if user exists: \(error.localizedDescription)")
         }
-        
-        // Verify password match
-        guard txtPassword.text == txtVerifyPassword.text else {
-            // Passwords don't match
-            let alertController = UIAlertController(title: "Error", message: "Passwords don't match", preferredStyle: .alert)
-            let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-            alertController.addAction(okAction)
-            present(alertController, animated: true, completion: nil)
-            return
-        }
-        
-        // Create new user
-        let newUser = RegisterUser(context: context)
-        newUser.username = txtUsername.text
-        newUser.email = txtEmail.text
-        newUser.password = txtPassword.text
-        
-        do {
-            try context.save()
-            // User saved successfully
-            let alertController = UIAlertController(title: "Success", message: "User created successfully", preferredStyle: .alert)
-            let okAction = UIAlertAction(title: "OK", style: .default, handler: { _ in
-                // Show confirmation message or navigate to next screen
-            })
-            alertController.addAction(okAction)
-            present(alertController, animated: true, completion: nil)
-        } catch {
-            print("Error saving user: \(error.localizedDescription)")
-            // Show error message
-        }
+        txtUsername.text = ""
+        txtEmail.text = ""
+        txtPassword.text = ""
+        txtVerifyPassword.text = ""
     }
+
+    func showAlert(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
+
 }
+In this code, we use a NSFetchRequest to check if a user with the same username or email address already exists in the database. If the count is zero, then we proceed to create a new user object and save it to the context. If there is already a user with the same username or email address, then we display a pop-up message using the showAlert() function.
+
+We also check if the password and verify password fields match before creating a new user object. If there is a mismatch, then we display a separate error message.
+
+Finally, we clear the text fields regardless of whether the user was successfully registered or not, so that the user can try again with different credentials.
+
+
+
+
+
