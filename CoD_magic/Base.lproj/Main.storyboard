@@ -13,11 +13,11 @@
             <objects>
                 <viewController title="Payments" id="V5P-NJ-I7j" customClass="PaymentsViewController" customModule="CoD_magic" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tRg-G7-hAX">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Payments" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RsA-vO-MeU">
-                                <rect key="frame" x="122.66666666666667" y="370.66666666666669" width="147.66666666666663" height="42"/>
+                                <rect key="frame" x="122.66666666666667" y="405" width="147.66666666666663" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -41,11 +41,11 @@
             <objects>
                 <viewController title="Service Request" id="AIc-sx-TIs" customClass="ServiceRequestViewController" customModule="CoD_magic" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZHG-X9-evj">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Service Request" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ht9-SR-PFR">
-                                <rect key="frame" x="74.666666666666686" y="370.66666666666669" width="244" height="42"/>
+                                <rect key="frame" x="74.666666666666686" y="405" width="244" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -69,11 +69,11 @@
             <objects>
                 <viewController title="Directory" id="Wmy-Nv-5fz" customClass="DirectoryViewController" customModule="CoD_magic" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FlG-JK-mti">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Directory" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P78-NK-RXD">
-                                <rect key="frame" x="128" y="370.66666666666669" width="137" height="42"/>
+                                <rect key="frame" x="128" y="405" width="137" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -102,11 +102,11 @@
             <objects>
                 <viewController title="City Calendar" id="SMA-cW-55m" customClass="CityCalendarViewController" customModule="CoD_magic" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MhR-R8-AS8">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City Calendar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RYV-SP-Yrb">
-                                <rect key="frame" x="94.666666666666686" y="370.66666666666669" width="204" height="42"/>
+                                <rect key="frame" x="94.666666666666686" y="405" width="204" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -130,7 +130,7 @@
             <objects>
                 <viewController title="News" id="gvY-hm-UYO" customClass="NewsViewController" customModule="CoD_magic" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yqv-Jr-APD">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h43-Fd-sPV">
@@ -152,17 +152,17 @@
                                 <color key="textColor" systemColor="systemRedColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cod_logo" translatesAutoresizingMaskIntoConstraints="NO" id="De4-Z3-DpL">
+                                <rect key="frame" x="20" y="87" width="116" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome First Last!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tDi-HD-lRH">
-                                <rect key="frame" x="144" y="127" width="150" height="21"/>
+                                <rect key="frame" x="166" y="127" width="150" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CoD_icon" translatesAutoresizingMaskIntoConstraints="NO" id="De4-Z3-DpL">
-                                <rect key="frame" x="0.0" y="87" width="116" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Cfh-6E-Dag"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -234,7 +234,7 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CoD_magic" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CoD_img_background" translatesAutoresizingMaskIntoConstraints="NO" id="qrG-oe-ekf">
@@ -331,7 +331,7 @@
             <objects>
                 <viewController title="Registration" id="iTB-jK-mxL" customClass="RegistrationViewController" customModule="CoD_magic" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Hee-yi-g9S">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CoD_img_background" translatesAutoresizingMaskIntoConstraints="NO" id="bgk-bL-AgR">
@@ -441,12 +441,10 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="WUv-5X-GR9"/>
-        <segue reference="4DD-F6-fmx"/>
+        <segue reference="RXd-n7-lXh"/>
         <segue reference="OaP-HR-tt0"/>
     </inferredMetricsTieBreakers>
     <resources>
-        <image name="CoD_icon" width="400" height="400"/>
         <image name="CoD_img_background" width="1200" height="719"/>
         <image name="book.closed" catalog="system" width="115" height="128"/>
         <image name="calendar" catalog="system" width="128" height="107"/>
