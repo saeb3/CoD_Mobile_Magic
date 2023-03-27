@@ -18,6 +18,7 @@ class RegistrationViewController: UIViewController, UITextFieldDelegate {
     
     var currentUser: RegisterUser?
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     
     
@@ -25,22 +26,22 @@ class RegistrationViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        let textFields: [UITextField] = [txtUsername, txtPassword, txtEmail]
-        for textfield in textFields {
-            textfield.addTarget(self, action: #selector(UITextFieldDelegate.textFieldShouldEndEditing(_:)), for: UIControl.Event.editingDidEnd)
-        }
+//        let textFields: [UITextField] = [txtUsername, txtPassword, txtEmail]
+//        for textfield in textFields {
+//            textfield.addTarget(self, action: #selector(UITextFieldDelegate.textFieldShouldEndEditing(_:)), for: UIControl.Event.editingDidEnd)
+//        }
     }
     
-    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
-        if currentUser == nil {
-            let context = appDelegate.persistentContainer.viewContext
-            currentUser = RegisterUser(context: context)
-        }
-        currentUser?.username = txtUsername.text
-        currentUser?.password = txtPassword.text
-        currentUser?.email = txtEmail.text
-        return true
-    }
+//    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
+//        if currentUser == nil {
+//            let context = appDelegate.persistentContainer.viewContext
+//            currentUser = RegisterUser(context: context)
+//        }
+//        currentUser?.username = txtUsername.text
+//        currentUser?.password = txtPassword.text
+//        currentUser?.email = txtEmail.text
+//        return true
+//    }
 
     //Steps to add button and implement save functionality
     
