@@ -25,23 +25,9 @@ class RegistrationViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
-//        let textFields: [UITextField] = [txtUsername, txtPassword, txtEmail]
-//        for textfield in textFields {
-//            textfield.addTarget(self, action: #selector(UITextFieldDelegate.textFieldShouldEndEditing(_:)), for: UIControl.Event.editingDidEnd)
-//        }
+
     }
     
-//    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
-//        if currentUser == nil {
-//            let context = appDelegate.persistentContainer.viewContext
-//            currentUser = RegisterUser(context: context)
-//        }
-//        currentUser?.username = txtUsername.text
-//        currentUser?.password = txtPassword.text
-//        currentUser?.email = txtEmail.text
-//        return true
-//    }
 
     //Steps to add button and implement save functionality
     
