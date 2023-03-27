@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D0AF6A829D25E100013C47D /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D0AF6A729D25E100013C47D /* Launch Screen.storyboard */; };
 		3D3327FA29C8F80700F84CBF /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3327F929C8F80700F84CBF /* NewsViewController.swift */; };
 		3D3327FC29C8F81800F84CBF /* CityCalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3327FB29C8F81800F84CBF /* CityCalendarViewController.swift */; };
 		3D3327FE29C8F82600F84CBF /* PaymentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3327FD29C8F82600F84CBF /* PaymentsViewController.swift */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3D0AF6A729D25E100013C47D /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		3D3327F929C8F80700F84CBF /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		3D3327FB29C8F81800F84CBF /* CityCalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityCalendarViewController.swift; sourceTree = "<group>"; };
 		3D3327FD29C8F82600F84CBF /* PaymentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentsViewController.swift; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 				3D7D37D529BEDB260084BEA2 /* CoD_magic.xcdatamodeld */,
 				3D3327F729C8F77F00F84CBF /* Login & Registration Controllers */,
 				3D3327F829C8F7D700F84CBF /* Main Options Controllers */,
+				3D0AF6A729D25E100013C47D /* Launch Screen.storyboard */,
 			);
 			path = CoD_magic;
 			sourceTree = "<group>";
@@ -164,6 +167,7 @@
 			files = (
 				3D7D37DC29BEDB270084BEA2 /* LaunchScreen.storyboard in Resources */,
 				3D7D37D929BEDB270084BEA2 /* Assets.xcassets in Resources */,
+				3D0AF6A829D25E100013C47D /* Launch Screen.storyboard in Resources */,
 				3D7D37D429BEDB260084BEA2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
