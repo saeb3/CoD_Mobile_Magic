@@ -27,6 +27,7 @@ class RegistrationViewController: UIViewController {
                     newUser.email = txtEmail.text
                     newUser.password = txtPassword.text
                     appDelegate.saveContext()
+                    showAlert(title: "Registration Successful", message: "Your account has been created.")
                 } else {
                     showAlert(title: "Password Mismatch", message: "Please verify your password.")
                 }
@@ -36,10 +37,6 @@ class RegistrationViewController: UIViewController {
         } catch {
             print("Error checking if user exists: \(error.localizedDescription)")
         }
-        txtUsername.text = ""
-        txtEmail.text = ""
-        txtPassword.text = ""
-        txtVerifyPassword.text = ""
     }
 
     func showAlert(title: String, message: String) {
@@ -49,13 +46,4 @@ class RegistrationViewController: UIViewController {
     }
 
 }
-In this code, we use a NSFetchRequest to check if a user with the same username or email address already exists in the database. If the count is zero, then we proceed to create a new user object and save it to the context. If there is already a user with the same username or email address, then we display a pop-up message using the showAlert() function.
-
-We also check if the password and verify password fields match before creating a new user object. If there is a mismatch, then we display a separate error message.
-
-Finally, we clear the text fields regardless of whether the user was successfully registered or not, so that the user can try again with different credentials.
-
-
-
-
 
