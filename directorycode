@@ -1,0 +1,59 @@
+class DirectoryViewController: UITableViewController {
+
+    let alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M",
+                    "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        // Set up your table view here
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+    }
+
+    // MARK: - Table view data source
+
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return alphabet.count
+    }
+
+    override func sectionIndexTitles(for tableView: UITableView) -> [String]? {
+        return alphabet
+    }
+
+    override func tableView(_ tableView: UITableView, sectionForSectionIndexTitle title: String, at index: Int) -> Int {
+        return alphabet.firstIndex(of: title)!
+    }
+
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // Return the number of rows in each section
+        return 10
+    }
+
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        // Return the appropriate letter for each section
+        return alphabet[section]
+    }
+
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        
+        // Set up your cells here
+        
+        return cell
+    }
+    
+    // IBActions for scrolling to each section
+    @IBAction func scrollToSectionA() {
+        tableView.scrollToRow(at: IndexPath(row: 0, section: 0), at: .top, animated: true)
+    }
+    
+    @IBAction func scrollToSectionB() {
+        if let index = alphabet.firstIndex(of: "B") {
+            tableView.scrollToRow(at: IndexPath(row: 0, section: index), at: .top, animated: true)
+        }
+    }
+    
+    // Add IBActions for each letter in the alphabet
+    // ...
+
+}
