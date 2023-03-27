@@ -31,6 +31,12 @@ class ViewController: UIViewController {
                }
         // Do any additional setup after loading the view.
     }
+    
+    // Pops this controller out of navigation controller, so the back button at the top left doesn't appear after you have registered
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationItem.hidesBackButton = true
+    }
 
     //Function that saves the username and password to UserDefaults if the
     //"remember me" switch is on, or removes the stored username and password
