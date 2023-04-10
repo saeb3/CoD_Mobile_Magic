@@ -6,6 +6,8 @@
 //  Sean Flanagan
 
 import UIKit
+import SwiftUI
+
 
 class NewsViewController: UIViewController {
     
@@ -15,6 +17,7 @@ class NewsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
 
         
         // Do any additional setup after loading the view
@@ -31,6 +34,8 @@ class NewsViewController: UIViewController {
         backgroundImageView.clipsToBounds = true
       
     }
+    
+  
     
 
     /*
