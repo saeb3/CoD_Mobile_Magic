@@ -60,6 +60,8 @@ class ViewController: UIViewController {
         //Save user's data to Core Data
         updateRememberMeSetting()
         
+        
+        
         //Call the 'sign-in' function from your 'btnSubmit' function, passing in the username and password entered by the user
         //Retrieve the username and password entered by the user
         guard let username = txtUsername.text, !username.isEmpty else {
@@ -78,6 +80,7 @@ class ViewController: UIViewController {
         if signIn(username: username, password: password) {
             //Sign-in successful, navigate to the next screen or perform other logic
             print("Successful sign-in!")
+            
         } else {
             
             let alertController = UIAlertController(title: "Error", message: "Incorrect Login.", preferredStyle: .alert)
@@ -112,6 +115,22 @@ class ViewController: UIViewController {
             if let user = results.first as? RegisterUser {
                 //User found, sign in successful
                 print("User found!")
+                
+                
+                let fetchRequest: NSFetchRequest<User> = User.fetchRequest()
+                fetchRequest.predicate = NSPredicate(format: "username == %@", username)
+                
+                do {
+                    let results = try context.fetch(fetchRequest)
+                    
+                    if let user = results.first {
+                        UserSingleton.shared.user = user
+                    }
+                
+                } catch let error as NSError {
+                    print("Could not fetch user object")
+                }
+                
                 return true
             } else {
                 //User not found, sign in failed

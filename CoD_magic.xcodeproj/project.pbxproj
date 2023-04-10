@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3D0AF6A829D25E100013C47D /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D0AF6A729D25E100013C47D /* Launch Screen.storyboard */; };
+		3D2AB0FC29E3B29000328075 /* UserSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2AB0FB29E3B29000328075 /* UserSingleton.swift */; };
 		3D3327FA29C8F80700F84CBF /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3327F929C8F80700F84CBF /* NewsViewController.swift */; };
 		3D3327FC29C8F81800F84CBF /* CityCalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3327FB29C8F81800F84CBF /* CityCalendarViewController.swift */; };
 		3D3327FE29C8F82600F84CBF /* PaymentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3327FD29C8F82600F84CBF /* PaymentsViewController.swift */; };
@@ -25,6 +26,7 @@
 
 /* Begin PBXFileReference section */
 		3D0AF6A729D25E100013C47D /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		3D2AB0FB29E3B29000328075 /* UserSingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSingleton.swift; sourceTree = "<group>"; };
 		3D3327F929C8F80700F84CBF /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		3D3327FB29C8F81800F84CBF /* CityCalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityCalendarViewController.swift; sourceTree = "<group>"; };
 		3D3327FD29C8F82600F84CBF /* PaymentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentsViewController.swift; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 			children = (
 				3D7D37CC29BEDB260084BEA2 /* AppDelegate.swift */,
 				3D7D37CE29BEDB260084BEA2 /* SceneDelegate.swift */,
+				3D2AB0FB29E3B29000328075 /* UserSingleton.swift */,
 				3D7D37D229BEDB260084BEA2 /* Main.storyboard */,
 				3D7D37D829BEDB270084BEA2 /* Assets.xcassets */,
 				3D7D37DA29BEDB270084BEA2 /* LaunchScreen.storyboard */,
@@ -179,6 +182,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D2AB0FC29E3B29000328075 /* UserSingleton.swift in Sources */,
 				3D7D37D729BEDB260084BEA2 /* CoD_magic.xcdatamodeld in Sources */,
 				3D33280229C8F84200F84CBF /* DirectoryViewController.swift in Sources */,
 				3D7D37D129BEDB260084BEA2 /* ViewController.swift in Sources */,
