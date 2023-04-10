@@ -54,6 +54,10 @@ class ViewController: UIViewController {
         }
     }
     
+    @IBAction func dismissKeyboard() {
+        txtUsername.resignFirstResponder()
+    }
+    
     //Call the 'updateRememberMeSetting' function from the 'saveButtonPressed' function
     
     @IBAction func btnSubmit(_ sender: UIButton) {
