@@ -8,7 +8,7 @@
 import UIKit
 import CoreData
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var txtUsername: UITextField!
     @IBOutlet weak var txtPassword: UITextField!
@@ -16,6 +16,14 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        txtUsername.delegate = self
+        txtPassword.delegate = self
+        
+        // Dismisses the keyboard when the Done button is pressed
+        func textFieldShouldReturn(textField: UITextField) -> Bool {
+            textField.resignFirstResponder()
+            return true
+        }
         
         //Loads the saved username and password from UserDefaults and set
         //the "remember me" switch to on if there is a saved username and password
@@ -52,10 +60,6 @@ class ViewController: UIViewController {
             defaults.removeObject(forKey: "savedUsername")
             defaults.removeObject(forKey: "savedPassword")
         }
-    }
-    
-    @IBAction func dismissKeyboard() {
-        txtUsername.resignFirstResponder()
     }
     
     //Call the 'updateRememberMeSetting' function from the 'saveButtonPressed' function
@@ -146,6 +150,12 @@ class ViewController: UIViewController {
             print("Error occurred while executing the fetch request")
             return false
         }
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        txtUsername.resignFirstResponder()
+        txtPassword.resignFirstResponder()
+        return true
     }
     
     
