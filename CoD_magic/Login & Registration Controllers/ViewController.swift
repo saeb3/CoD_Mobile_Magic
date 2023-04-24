@@ -20,10 +20,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
         txtPassword.delegate = self
         
         // Dismisses the keyboard when the Done button is pressed
-        func textFieldShouldReturn(textField: UITextField) -> Bool {
-            textField.resignFirstResponder()
-            return true
-        }
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard))
+        view.addGestureRecognizer(tap)
         
         //Loads the saved username and password from UserDefaults and set
         //the "remember me" switch to on if there is a saved username and password
@@ -40,6 +38,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
         // Do any additional setup after loading the view.
     }
     
+    @objc func dismissKeyboard() {
+        // Code to dismiss keyboard
+        view.endEditing(true)
+    }
     // Pops this controller out of navigation controller, so the back button at the top left doesn't appear after you have registered
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)

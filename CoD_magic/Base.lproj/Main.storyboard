@@ -517,7 +517,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="WUv-5X-GR9"/>
         <segue reference="4DD-F6-fmx"/>
         <segue reference="jaZ-RI-aRC"/>
     </inferredMetricsTieBreakers>
